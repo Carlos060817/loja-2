@@ -6,13 +6,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public appPages = [
-    { title: 'Inbox', url: '/folder/Inbox', icon: 'mail' },
-    { title: 'Outbox', url: '/folder/Outbox', icon: 'paper-plane' },
-    { title: 'Favorites', url: '/folder/Favorites', icon: 'heart' },
-    { title: 'Archived', url: '/folder/Archived', icon: 'archive' },
-    { title: 'Trash', url: '/folder/Trash', icon: 'trash' },
-    { title: 'Spam', url: '/folder/Spam', icon: 'warning' },
+    { title: 'Estoque', url: '/folder/estoque', icon: 'clipboard' },
+    { title: 'Cadastro', url: '/folder/Cadastro', icon: 'add' },
+    { title: 'Saída', url: '/folder/Saída', icon: 'paper-plane' },
+    { title: 'Catalogo', url: '/folder/Catalogo', icon: 'book' },
+    { title: 'Promoção', url: '/folder/Promocao', icon: 'cash' },
   ];
-  public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
+  //ublic labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
   constructor() {}
 }
