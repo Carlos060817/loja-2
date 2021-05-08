@@ -10,7 +10,20 @@ const routes: Routes = [
   {
     path: 'folder/:id',
     loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
+  },  {
+    path: 'cadastros',
+    loadChildren: () => import('./cadastros/cadastros.module').then( m => m.CadastrosPageModule)
+  },
+  {
+    path: 'estoques',
+    loadChildren: () => import('./estoques/estoques.module').then( m => m.EstoquesPageModule)
+  },
+  {
+    path: 'saidas',
+    loadChildren: () => import('./saidas/saidas.module').then( m => m.SaidasPageModule)
   }
+
+
 ];
 
 @NgModule({
