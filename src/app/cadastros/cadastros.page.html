@@ -14,8 +14,68 @@
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong class="capitalize">Cadastro</strong>
-    <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <div class="container">
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)" method="post" action="">
+    <h2 class="text-center titulo">Formulario de Cadastro</h2>
+        
+        <div class="form-group container row">
+            
+            <div class="col-md-6 ">
+                <label class="control-label">ID do Produto</label>
+                <input type="text" class="form-control" id="id" name="id" value="" ngModel required/>
+            </div>
+            <div class="col-md-6 ">
+                <label class="control-label">Nome do Produto</label>
+                <input type="text" class="form-control" id="nome" name="nome" value="" ngModel required/>
+            </div>
+    
+            
+            <div class="col-md-6 ">
+                <label class="control-label">Código</label>
+                <input type="number" class="form-control" id="cod" name="cod" value="" ngModel required/>
+            </div>
+    
+             
+            <div class="col-md-6">
+                <label class="control-label">Valor de saída</label>
+                <input type="number" class="form-control" id="saida" name="saida" value="" ngModel required/>
+            </div>
+            
+            <div class="col-md-6 ">
+                <label class=" control-label">Valor de entrada</label>
+                <input type="number" class="form-control" id="entrada" name="entrada" value="" ngModel required/>
+            </div>
+            
+            <div class="col-md-6">
+                <label class="control-label">Quantidade</label>
+                <input type="number" class="form-control" id="qtde" name="qtde" value="" ngModel required/>
+            </div>
+    
+        </div>
+    
+        
+          
+        
+        <div class="line line-dashed b-b line-lg pull-in"></div>
+        <div class="form-group container">
+        <div class=" col-sm-12 col-sm-offset-6 text-center">
+         <button type="submit"  class="btn  btn-md btn-primary btn-addon">Confirmar</button>
+         <input type="reset" value="Cancelar" class="btn btn-md btn-danger btn-addon mar">
+        
+        </div>
+        </div>
+    
+              
+        
+       <!-- <div class="line line-dashed b-b line-lg pull-in"></div>
+        <div class="form-group row container">
+            <div class="form-group">
+                <div class="col-sm-12 col-sm-offset-1">
+                    <a href="#"
+                       class="btn m-b-xs btn-sm btn-danger btn-addon"><i class="glyphicon glyphicon-remove"></i>Cancelar</a>
+                    <button type="submit" class="btn m-b-xs btn-sm btn-primary btn-addon" name="Insert"><i class="glyphicon glyphicon-floppy-saved"></i>Salvar</button>
+                </div>
+            </div>-->
+    </form>
+    </div>
 </ion-content>

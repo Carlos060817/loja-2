@@ -14,8 +14,28 @@
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong class="capitalize">Estoque</strong>
-    <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-header>
+    <ion-navbar>
+      <ion-title>Estoque</ion-title>
+    </ion-navbar>
+  </ion-header>
+
+<ion-content padding>
+  <ion-grid no-padding>
+      <ion-row>
+        <ion-col>ID</ion-col>
+        <ion-col>Codigo</ion-col>
+        <ion-col>Nome</ion-col>
+        <ion-col>Valor de entrada</ion-col>
+        <ion-col>Valor de saída</ion-col>
+        <ion-col>Quantidade</ion-col>
+      </ion-row>
+      <div  *ngFor="let item of lista">
+        <ion-row>
+          <ion-col>{{ produto.nome }}</ion-col>
+          <ion-col>{{ item.qtd_valor }}</ion-col>
+          <ion-col>{{ item.total }}</ion-col>
+        </ion-row>
+      </div>
+    </ion-grid>
 </ion-content>
