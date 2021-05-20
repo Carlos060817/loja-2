@@ -32,8 +32,28 @@
       </ion-row>
       <div  *ngFor="let produto of produtos">
         <ion-row>
+          <ion-col>{{ produto.id }}</ion-col>
+          <ion-col>{{ produto.cod }}</ion-col>
           <ion-col>{{ produto.nome }}</ion-col>
+          <ion-col>{{ produto.entrada }}</ion-col>
+          <ion-col>{{ produto.saida }}</ion-col>
+          <ion-col>{{ produto.qtde }}</ion-col>
         </ion-row>
       </div>
     </ion-grid>
+    <div  *ngFor="let produto of produtos">
+    <ion-item>
+      <ion-avatar slot="start">
+        <img src="#">
+      </ion-avatar>
+      <ion-label>
+        <h2>ID do Produto: {{ produto.id }}</h2>
+        <h2>Código: {{ produto.cod }}</h2>
+        <h2>Nome: {{ produto.nome}}</h2>
+        <h2>Quantidade: {{ produto.qtde}}</h2>
+        <h2>Entrada: {{ produto.entrada}}</h2>
+        <h2>Saída: {{ produto.saida}}</h2>
+      </ion-label>
+    </ion-item>
+    </div>
 </ion-content>
