@@ -14,8 +14,36 @@
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong class="capitalize">Saída</strong>
-    <p>Explore <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)" method="post" action="">
+    
+        
+       
+            
+    <ion-item>
+      <ion-label>ID do Produto:</ion-label>
+      <ion-input type="text" id="id" name="id" placeholder="Id do produto" value="" ngModel required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Nome do Produto:</ion-label>
+      <ion-input type="text" id="nome" placeholder="Nome do produto" name="nome" value="" ngModel required></ion-input>
+    </ion-item>
+      
+    <ion-item>
+      <ion-label >Código:</ion-label>
+      <ion-input type="number"  id="cod" placeholder="Código" name="cod" value="" ngModel required></ion-input>
+    </ion-item>
+         
+    <ion-item>
+      <ion-label>Quantidade:</ion-label>
+      <ion-input type="number" id="qtde" placeholder="Quantidade" name="qtde" value="" ngModel required></ion-input>
+    </ion-item>
+      
+    <section>
+      <ion-button type="submit" color="success">Confirmar</ion-button>
+      <ion-button type="reset" color="danger">Cancelar</ion-button>
+    </section>
+
+
+
+</form>
 </ion-content>
