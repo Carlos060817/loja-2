@@ -30,11 +30,9 @@
         <ion-col>Valor de saída</ion-col>
         <ion-col>Quantidade</ion-col>
       </ion-row>
-      <div  *ngFor="let item of lista">
+      <div  *ngFor="let produto of produtos">
         <ion-row>
           <ion-col>{{ produto.nome }}</ion-col>
-          <ion-col>{{ item.qtd_valor }}</ion-col>
-          <ion-col>{{ item.total }}</ion-col>
         </ion-row>
       </div>
     </ion-grid>
