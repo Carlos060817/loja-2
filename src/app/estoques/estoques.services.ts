@@ -16,10 +16,29 @@ private produtos: Estoque[]
       new Estoque(5,1005,"Parafuso/roda",5,12,100),
       new Estoque(6,1006,"Rodas/dianteiras",1000,2000,4)
     ]
+   
    }
    getEstoque(){
      return this.produtos
    }
+
+   getItemEstoque(i:number){
+    return this.produtos[i]
+  }
+
+
+  adicionarQuantidade(i:number, quantidade_inserida:number,valor_inserido:number, saida_inserida:number){
+    this.produtos[i].qtde = this.produtos[i].qtde + quantidade_inserida;
+    this.produtos[i].entrada = this.produtos[i].entrada + valor_inserido;
+    this.produtos[i].saida = this.produtos[i].saida + saida_inserida;
+    
+  }
+
+  removerQuantidade(i:number, quantidade_inserida:number,valor_inserido:number, saida_inserida:number){
+    this.produtos[i].qtde = this.produtos[i].qtde - quantidade_inserida;
+    this.produtos[i].entrada = this.produtos[i].entrada - valor_inserido;
+    this.produtos[i].saida = this.produtos[i].saida - saida_inserida;
+  }
 
    addProduto(id:number,cod:number,nome:string,entrada:number,saida:number,qtde:number){
     this.produtos.push(new Estoque(id,cod,nome,entrada,saida,qtde))

@@ -14,34 +14,10 @@
     </ion-toolbar>
   </ion-header>
 
- <!-- <ion-header>
-    <ion-navbar>
-      <ion-title>Estoque</ion-title>
-    </ion-navbar>
-  </ion-header>
 
-<ion-content padding>
-  <ion-grid no-padding>
-      <ion-row>
-        <ion-col>ID</ion-col>
-        <ion-col>Codigo</ion-col>
-        <ion-col>Nome</ion-col>
-        <ion-col>Valor de entrada</ion-col>
-        <ion-col>Valor de saída</ion-col>
-        <ion-col>Quantidade</ion-col>
-      </ion-row>
-      <div  *ngFor="let produto of produtos">
-        <ion-row>
-          <ion-col>{{ produto.id }}</ion-col>
-          <ion-col>{{ produto.cod }}</ion-col>
-          <ion-col>{{ produto.nome }}</ion-col>
-          <ion-col>{{ produto.entrada }}</ion-col>
-          <ion-col>{{ produto.saida }}</ion-col>
-          <ion-col>{{ produto.qtde }}</ion-col>
-        </ion-row>
-      </div>
-    </ion-grid>-->
-    <div  *ngFor="let produto of produtos">
+  <ion-button routerLink="/cadastros"><ion-icon icon="add"></ion-icon>Adcionar</ion-button>
+
+    <div  *ngFor="let produto of produtos; let i = index"  routerLink="/update-produto/{{i}}">
     <ion-item>
       <ion-avatar slot="start">
         <img src="../../assets/icon/favicon.png">
@@ -51,9 +27,9 @@
         <h2>Código: {{ produto.cod }}</h2>
         <h2>Nome: {{ produto.nome}}</h2>
         <h2>Quantidade: {{ produto.qtde}}</h2>
-        <h2>Entrada: {{ produto.entrada}}</h2>
-        <h2>Saída: {{ produto.saida}}</h2>
+        <h2>Valor de Entrada: R$ {{ produto.entrada}},00</h2>
+        <h2>Valor de Saída: R$ {{ produto.saida}},00</h2>
       </ion-label>
     </ion-item>
-    </div>
+  </div>
 </ion-content>
