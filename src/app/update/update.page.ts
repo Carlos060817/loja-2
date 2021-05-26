@@ -28,11 +28,30 @@ export class UpdatePage implements OnInit {
   onSubmit(from:any){
 
   }
+  //quantidade
   adicionar(): void{
-    this.estoqueService.adicionarQuantidade(this.index, this.quantidade,this.valor,this.saida);
+    this.estoqueService.adicionarQuantidade(this.index, this.quantidade);
   }
 
   remover(): void{
-    this.estoqueService.removerQuantidade(this.index, this.quantidade,this.valor,this.saida);
+    this.estoqueService.removerQuantidade(this.index, this.quantidade);
+  }
+
+  //saida
+  adicionar1(): void{
+    this.estoqueService.adicionarSaida(this.index,this.saida);
+  }
+
+  remover1(): void{
+    this.estoqueService.removerSaida(this.index,this.saida);
+  }
+
+//entrada
+  adicionar2(): void{
+    this.estoqueService.adicionarEntrada(this.index,this.valor);
+  }
+
+  remover2(): void{
+    this.estoqueService.removerEntrada(this.index,this.valor);
   }
 }

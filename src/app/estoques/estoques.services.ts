@@ -27,18 +27,35 @@ private produtos: Estoque[]
   }
 
 
-  adicionarQuantidade(i:number, quantidade_inserida:number,valor_inserido:number, saida_inserida:number){
+  adicionarQuantidade(i:number, quantidade_inserida:number){
     this.produtos[i].qtde = this.produtos[i].qtde + quantidade_inserida;
-    this.produtos[i].entrada = this.produtos[i].entrada + valor_inserido;
+    
+  }
+
+  removerQuantidade(i:number, quantidade_inserida:number){
+    this.produtos[i].qtde = this.produtos[i].qtde - quantidade_inserida;
+  }
+
+  adicionarSaida(i:number, saida_inserida:number){
     this.produtos[i].saida = this.produtos[i].saida + saida_inserida;
     
   }
 
-  removerQuantidade(i:number, quantidade_inserida:number,valor_inserido:number, saida_inserida:number){
-    this.produtos[i].qtde = this.produtos[i].qtde - quantidade_inserida;
-    this.produtos[i].entrada = this.produtos[i].entrada - valor_inserido;
+  removerSaida(i:number,saida_inserida:number){
     this.produtos[i].saida = this.produtos[i].saida - saida_inserida;
   }
+
+  adicionarEntrada(i:number,valor_inserido:number){
+    this.produtos[i].entrada = this.produtos[i].entrada + valor_inserido;
+  }
+
+  removerEntrada(i:number,valor_inserido:number){
+    
+    this.produtos[i].entrada = this.produtos[i].entrada - valor_inserido;
+
+  }
+
+
 
    addProduto(id:number,cod:number,nome:string,entrada:number,saida:number,qtde:number){
     this.produtos.push(new Estoque(id,cod,nome,entrada,saida,qtde))

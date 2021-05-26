@@ -34,18 +34,27 @@
     <ion-item>
       <ion-label>Quantidade:</ion-label>
       <ion-input type="number"  placeholder="Quantidade" name="qtde" id="qtde" value="" [(ngModel)]="quantidade" required></ion-input>
+      <section>
+        <ion-button (click)="adicionar()" color="success">+</ion-button>
+        <ion-button (click)="remover()" color="danger">-</ion-button>
+      </section>
     </ion-item>
     <ion-item>
       <ion-label>Entrada:</ion-label>
       <ion-input type="number"  name="entrada" id="entrada" value="" [(ngModel)]="valor" required></ion-input>
+      <section>
+        <ion-button (click)="adicionar2()" color="success">+</ion-button>
+        <ion-button (click)="remover2()" color="danger">-</ion-button>
+      </section>
     </ion-item>
     <ion-item>
       <ion-label>Saída:</ion-label>
       <ion-input type="number"  name="saida" id="saida" value="" [(ngModel)]="saida" required></ion-input>
+      <section>
+        <ion-button (click)="adicionar1()" color="success">+</ion-button>
+        <ion-button (click)="remover1()" color="danger">-</ion-button>
+      </section>
     </ion-item>
-    <section>
-      <ion-button (click)="adicionar()" color="success">Adcionar</ion-button>
-      <ion-button (click)="remover()" color="danger">Remover</ion-button>
-    </section>
+
   </form>
 </ion-content>
